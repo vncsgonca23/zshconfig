@@ -42,12 +42,9 @@ remove_file "~/.local/share/fonts/MesloLGS NF Bold Italic.ttf"
 echo "Atualizando cache de fontes..."
 fc-cache -fv
 
-# Remover pacotes instalados (Neovim, Git, Curl, Unzip)
-echo "Removendo pacotes instalados (Neovim, Git, Curl, Unzip)..."
-sudo pacman -Rns --noconfirm neovim git curl unzip
+# Remover ferramentas adicionais (fzf)
+echo "Removendo ferramentas adicionais (fzf)..."
+sudo pacman -Rns --noconfirm fzf
 
-# Remover ferramentas adicionais (fzf, bat, exa)
-echo "Removendo ferramentas adicionais (fzf, bat, exa)..."
-sudo pacman -Rns --noconfirm fzf bat exa
-
-echo "Desinstalação e limpeza concluídas!"
+# Mensagem final
+echo "Desinstalação e limpeza relacionadas ao Neovim concluídas!"
